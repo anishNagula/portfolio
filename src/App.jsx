@@ -45,6 +45,7 @@ export default function Terminal() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   const [history, setHistory] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
+  const [showSidebar, setShowSidebar] = useState(false); // New state for sidebar visibility
 
   useEffect(() => {
     if (index < bootLines.length) {
@@ -58,6 +59,7 @@ export default function Terminal() {
         setShowAscii(true);
         setBootComplete(true);
         setUserOutput(["> help", commands.help]);
+        setShowSidebar(true); // Show sidebar after boot completes
       }, 1000);
     }
   }, [index]);
@@ -155,9 +157,12 @@ export default function Terminal() {
             )}
           </div>
         </div>
-        <div className="rightSidebar">
 
-        </div>
+        {showSidebar && (
+          <div className="rightSidebar">
+            {/* Sidebar content goes here */}
+          </div>
+        )}
       </div>
     </div>
   );
