@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import profile_pic from './assets/anish_pfp.jpg';
-import './app.css';
+import './App.css';
 
 const commands = {
   help: "Commands: portfolio, projects, blog, about, contact, clear, ls, cd, sudo rm -rf /, neofetch",
