@@ -1,0 +1,34 @@
+.main-container {
+  display: flex;
+  gap: 10px;
+}
+
+.topContainer, .bottomContainer {
+  border: solid #8c8fa1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.topContainer {
+  margin-bottom: 10px;
+}
+
+.bottomContainer {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.name-logo {
+  display: flex;
+  justify-content: center;
+  color: #ef9f76;
+}
+
+.rightSidebar {
+  width: 600px;
+  max-width: 600px;
+  height: 96vh;
+  max-height: 96vh;
+  border: solid #8c8fa1;
+  border-radius: 6px;
+}
