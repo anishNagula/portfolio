@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const commands = {
-  help: "Commands: portfolio, projects, blog, about, contact, clear, ls, cd, sudo rm -rf /, neofetch",
+  help: "Commands: cd about, cd projects, cd blog, contact, clear, ls, sudo rm -rf /, neofetch",
   portfolio: "Opening Portfolio... <a href='/portfolio'>Click here</a>",
   projects: "Opening Projects... <a href='/projects'>Click here</a>",
   blog: "Opening Blog... <a href='/blog'>Click here</a>",
@@ -35,6 +36,70 @@ const asciiArt = [
 const description1 = "Hi👋, I'm Anish Nagula, Full-Stack Web Developer; Coding Enthusiast.";
 const description2 = "A college student who loves breaking and building things! I tinker with web projects, dive into operating systems, and geek out over computer architecture. If it runs code, I probably want to mess with it."
 
+const getFakeCPUUsage = () => (Math.random() * 50 + 30).toFixed(1);
+const getFakeMemoryUsage = () => (Math.random() * 40 + 50).toFixed(1);
+
+
+function RightSidebar() {
+  const [cpuUsage, setCpuUsage] = useState(getFakeCPUUsage());
+  const [memoryUsage, setMemoryUsage] = useState(getFakeMemoryUsage());
+  const [uptime, setUptime] = useState(0);
+  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+
+  useEffect(() => {
+    const updateStats = () => {
+      setCpuUsage(getFakeCPUUsage());
+      setMemoryUsage(getFakeMemoryUsage());
+    };
+  
+    const statsInterval = setInterval(updateStats, 5000);
+    const uptimeInterval = setInterval(() => setUptime((prev) => prev + 1), 1000);
+    const timeInterval = setInterval(() => setCurrentTime(new Date().toLocaleTimeString()), 1000);
+  
+    return () => {
+      clearInterval(statsInterval);
+      clearInterval(uptimeInterval);
+      clearInterval(timeInterval);
+    };
+  }, []);
+
+  const data = [
+    { name: "CPU", usage: cpuUsage },
+    { name: "Memory", usage: memoryUsage },
+  ];
+
+  return (
+    <div className="rightSidebar w-1/4 border-green-500 border-2 p-4">
+      <h2 className="text-green-300">System Info</h2>
+      <p className="right-p"><strong>Time:</strong> {currentTime}</p>
+      <p className="right-p"><strong>Uptime:</strong> {Math.floor(uptime / 60)}m {uptime % 60}s</p>
+      <p className="right-p"><strong>User:</strong> anish</p>
+
+      <h2 className="text-green-300 mt-4">Performance</h2>
+      <ResponsiveContainer width="100%" height={150}>
+        <BarChart data={data}>
+          <XAxis dataKey="name" />
+          <YAxis type="number" domain={[0, 100]} />
+          <Bar dataKey="usage" fill="#fab387" barSize={30} />
+        </BarChart>
+      </ResponsiveContainer>
+
+      <p className="right-p"><strong>CPU:</strong> {cpuUsage}%</p>
+      <p className="right-p"><strong>Memory:</strong> {memoryUsage}%</p>
+
+      <h2 className="text-green-300 mt-4">Top Processes</h2>
+      <ul className="list-none">
+        <li>&#10095; node  —  {Math.floor(cpuUsage / 2)}% CPU</li>
+        <li>&#10095; chrome —  {Math.floor(memoryUsage / 3)}% MEM</li>
+        <li>&#10095; bash  —  0.1% CPU</li>
+      </ul>
+
+      <p className="right-p">RTFM. Always. 📖</p>
+    </div>
+  );
+}
+
+
 export default function Terminal() {
   const [bootOutput, setBootOutput] = useState([]);
   const [userOutput, setUserOutput] = useState([]);
@@ -42,6 +107,7 @@ export default function Terminal() {
   const [index, setIndex] = useState(0);
   const [showAscii, setShowAscii] = useState(false);
   const [bootComplete, setBootComplete] = useState(false);
+  const [showBottomContainer, setShowBottomContainer] = useState(false);
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   const [history, setHistory] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
@@ -60,7 +126,8 @@ export default function Terminal() {
         setShowAscii(true);
         setBootComplete(true);
         setUserOutput(["> help", commands.help]);
-        setShowSidebar(true); // Show sidebar after boot completes
+        setShowSidebar(true);
+        setShowBottomContainer(true);
       }, 1000);
     }
   }, [index]);
@@ -91,7 +158,7 @@ export default function Terminal() {
           }
         } else if (cmd.startsWith("cd ")) {
           const arg = cmd.split(" ")[1];
-          if (["projects", "portfolio", "blog"].includes(arg)) {
+          if (["projects", "portfolio", "blog", "about"].includes(arg)) {
             navigate(`/${arg}`);
           } else {
             newOutput.push(`cd: no such directory: ${arg}`);
@@ -150,30 +217,30 @@ export default function Terminal() {
             )}
           </div>
 
-          <div className="bottomContainer p-4 overflow-y-auto border-t border-green-500">
-            {userOutput.map((line, idx) => (
-              <div key={idx}><span className="cmd-path-text">anish@AnishLp [{time}]$ </span>{line}</div>
-            ))}
-            {bootComplete && (
-              <div className="flex">
-                <span className="cmd-path-text">anish@AnishLp [{time}]$ </span>
-                <input
-                  type="text"
-                  className="bg-transparent border-none outline-none text-green-400 ml-2 w-full"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={handleCommand}
-                  autoFocus
-                />
-              </div>
-            )}
-          </div>
+          {showBottomContainer && (
+            <div className="bottomContainer p-4 overflow-y-auto border-t border-green-500">
+              {userOutput.map((line, idx) => (
+                <div key={idx}><span className="cmd-path-text">anish@AnishLp [{time}]$ </span>{line}</div>
+              ))}
+              {bootComplete && (
+                <div className="flex">
+                  <span className="cmd-path-text">anish@AnishLp [{time}]$ </span>
+                  <input
+                    type="text"
+                    className="terminal-imput bg-transparent border-none outline-none text-green-400 ml-2 w-full"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={handleCommand}
+                    autoFocus
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {showSidebar && (
-          <div className="rightSidebar">
-            {/* Sidebar content goes here */}
-          </div>
+          <RightSidebar />
         )}
       </div>
     </div>
