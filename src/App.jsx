@@ -1,45 +1,22 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import Home from './components/Home/Home';
-import Projects from './components/Projects/Projects';
-import About from './components/About/About';
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import Home from "./components/Home/Home";
+import Projects from "./components/Projects/Projects";
+import Blog from "./components/Blog/Blog";
+import Resume from "./components/Resume/Resume";
+import Contact from "./components/Contact/Contact";
 
-const App = () => {
-
+export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        {/* <Route path="/contact" element={<Contact />} />
-
-        <Route
-          path="/home"
-          element={
-            <RequireAuth>
-              <MainNavbar onLogout={handleLogout} />
-              <Home user={user} onLogout={handleLogout} currentUser={user} />
-            </RequireAuth>
-          }
-        />
-
-
-        <Route
-          path="/profile"
-          element={
-            <RequireAuth>
-              <MainNavbar onLogout={handleLogout} />
-              <div>Profile Page</div>
-            </RequireAuth>
-          }
-        /> */}
-
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </Router>
+      <Router>
+          <Routes>
+              <Route path="/" element={<Layout />}/>
+              <Route index element={<Home />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="blog" element={<Blog />} />
+              <Route path="resume" element={<Resume />} />
+              <Route path="contact" element={<Contact />} />
+          </Routes>
+      </Router>
   );
-};
-
-export default App;
+}

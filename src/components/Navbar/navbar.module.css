@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    padding: 0.75% 15%;
+    background-color: #121212;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.navbar ul li:nth-child(1) a{
+    color: orange;
+}
+
+.navbar ul li:nth-child(2) a{
+    color: rgb(177, 146, 255);
+}
+
+.navbar ul li:nth-child(3) a{
+    color: salmon;
+}
+
+.navbar ul li:nth-child(4) a{
+    color: lightgreen;
+}
+
+.navbar ul li:nth-child(5) a{
+    color: lightskyblue;
+}
+
+.navbar ul li:nth-child(6) a{
+    color: khaki;
+}

@@ -1,23 +1,13 @@
 * {
   font-family: Fira Code;
-  background-color: #000000;
-  color: #cdd6f4;
-  font-size: 14px;
+  color: #f6f4f1;
   margin: 0;
-  padding: 1px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
-.cmd-path-text {
-  color: #a6e3a1;
-}
-
-input {
-  border: none;
-}
-
-input:focus {
-  outline: none;
+body {
+  background-color: #121212;
 }
 
 ::-webkit-scrollbar {
@@ -32,4 +22,10 @@ input:focus {
 ::-webkit-scrollbar-thumb:vertical {
   height: 30px;
   background-color: #cdd6f4;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #646464;
 }
