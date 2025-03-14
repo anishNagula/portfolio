@@ -1,6 +1,8 @@
 .navbar {
     display: flex;
-    padding: 0.75% 15%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5%; /* Use percentage for responsiveness */
     background-color: #121212;
     width: 100%;
 }
@@ -8,15 +10,23 @@
 .navbar ul {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
-    gap: 30px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 15px; /* Reduce gap for better fit */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    flex-shrink: 0; /* Prevents items from squeezing */
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduce font size slightly for small screens */
+    padding: 10px;
 }
 
 .navbar ul li:nth-child(1) a{
@@ -41,4 +51,16 @@
 
 .navbar ul li:nth-child(6) a{
     color: khaki;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+        padding: 8px;
+    }
 }
