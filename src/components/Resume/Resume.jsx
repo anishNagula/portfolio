@@ -1,10 +1,13 @@
-import Layout from '../Layout/Layout'
+import Layout from '../Layout/Layout';
+import styles from './resume.module.css';
 
 export default function Resume() {
     return (
-        <Layout>
-            <h1>Resume</h1>
-            <p>Download my resume here.</p>
-        </Layout>
+        <div className={styles.main}>
+            <Layout />
+            <div className={styles.innermain}>
+                <iframe src="/AnishNagula_Resume.pdf" className={styles.pdfViewer} title="Resume" />
+            </div>
+        </div>
     );
 }
