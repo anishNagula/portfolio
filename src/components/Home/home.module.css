@@ -124,6 +124,7 @@ ul {
 .mylinks ul li a {
     text-decoration: none;
     font-size: 14px;
+    color: #f6f4f1;
 }
 
 /* Media Queries for Mobile & Tablets */

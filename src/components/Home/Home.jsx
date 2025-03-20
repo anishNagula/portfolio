@@ -1,5 +1,16 @@
+import { Link } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import styles from './home.module.css'
+
+function SecretPin() {
+  return (
+    <Link to="/study-materials">
+      <span style={{ cursor: "pointer", fontSize: "20px", marginLeft: "10px" }}>
+        📌
+      </span>
+    </Link>
+  );
+}
 
 function ProjComp({ title, description, tech }) {
   return (
@@ -60,7 +71,7 @@ export default function Home() {
               </ul>
             </div>
             <div className={styles.rightcontainer}>
-              <h2>📌 Featured Projects</h2>
+              <h2><SecretPin/> Featured Projects</h2>
               <ProjComp 
                 title="QuickBang" 
                 description="A simple and lightweight search tool with custom bang shortcuts (!bang)." 
