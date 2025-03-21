@@ -5,7 +5,6 @@ import Projects from "./components/Projects/Projects";
 import Blog from "./components/Blog/Blog";
 import Resume from "./components/Resume/Resume";
 import Contact from "./components/Contact/Contact";
-import StudyMaterials from "./components/StudyMaterials/StudyMaterials";
 
 export default function App() {
   return (
@@ -17,7 +16,6 @@ export default function App() {
               <Route path="blog" element={<Blog />} />
               <Route path="resume" element={<Resume />} />
               <Route path="contact" element={<Contact />} />
-              <Route path="/study-materials" element={<StudyMaterials />} />
           </Routes>
       </Router>
   );
