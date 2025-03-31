@@ -26,13 +26,14 @@ export default function Projects() {
     const completedProjects = [
         { title: "LeetCode-Backend", description: "A simple backend system built in Go, designed to emulate core features of platforms like LeetCode. This project includes user authentication, running code in python, and managing coding problems with test cases.", started: "Oct 2024", lastWorkedon: "Oct 2024", link: "https://github.com/anishNagula/Leetcode-Backend" },
         { title: "Simple-User-and-Product-Management-System", description: "This is a basic C program that helps manage user and product information. The program uses hash tables for organizing products and binary trees to keep track of what user purchases. Every time a user purchases a product he will be automatically recommended related products using hashtables.", started: "Sep 2024", lastWorkedon: "Sep 2024", link: "https://github.com/anishNagula/Simple-User-and-Product-Management-System" },
+        { title: "Bash-PassMgr", description: "A minimal password manager that securely stores your credentials using AES-256 encryption with OpenSSL. No cloud storage, no third-party dependencies—just a lightweight, local password manager.", started: "Apr 20205", lastWorkedon: "Apr 2024", link: "https://github.com/anishNagula/Bash-PassMgr" },
         { title: "Amazon-Clone", description: "Built as a projects when learning basic front-end development. Used languages such as HTML/CSS/JavaScript", started: "Mar 2024", lastWorkedon: "Apr 2024", link: "https://github.com/anishNagula/Amazon-Clone" },
     ];
 
     const workingOnProjects = [
         { title: "Smart Door Security System", description: "Uses sensors to detect intrusions", started: "Mar 2025", lastWorkedon: "Mar 2025", link: "" },
         { title: "QuickBang", description: "A simple and lightweight search tool with custom bang shortcuts (!bang) for quick redirections to various search engines and websites. Supports dropdown suggestions, arrow key navigation, and auto-search on selection.", started: "Jan 2025", lastWorkedon: "Mar 2025", link: "https://quickbang.netlify.app" },
-        { title: "Travel Diary", description: "A MERN stack application where users can document their travel experiences with posts that include text, images, and interactive maps. Users can like, comment, and engage with other travel stories", started: "Nov 2024", lastWorkedon: "Mar 2025", link: "https://travel-diary-web.vercel.app/" },
+        { title: "Whisper", description: "A private, real-time chat app with disappearing messages and secure friend-to-friend conversations.", started: "Mar 2025", lastWorkedon: "Mar 2025", link: "https://anishnagula.me/projects" },
         { title: "DevLink", description: "A MERN stack application where developers can collaborate, share projects, and engage in discussions. Users can showcase their work, connect with others, and contribute to open-source initiatives. ", started: "Nov 2024", lastWorkedon: "Mar 2025", link: "" },
     ];
 
