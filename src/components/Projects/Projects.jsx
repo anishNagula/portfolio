@@ -24,9 +24,10 @@ function ProjectCard({ title, description, started, lastWorkedon, link }) {
 
 export default function Projects() {
     const completedProjects = [
+        { title: "Bash-PassMgr", description: "A minimal password manager that securely stores your credentials using AES-256 encryption with OpenSSL. No cloud storage, no third-party dependencies—just a lightweight, local password manager.", started: "Apr 20205", lastWorkedon: "Apr 2024", link: "https://github.com/anishNagula/Bash-PassMgr" },
+        { title: "GhostDrop ", description: "A privacy-focused, peer-to-peer file-sharing app that generates a download link & QR code for seamless transfers between devices. No accounts, no hassle. Built with React + Supabase.", started: "Mar 2025", lastWorkedon: "Mar 2025", link: "https://ghostdrop.anishnagula.me" },
         { title: "LeetCode-Backend", description: "A simple backend system built in Go, designed to emulate core features of platforms like LeetCode. This project includes user authentication, running code in python, and managing coding problems with test cases.", started: "Oct 2024", lastWorkedon: "Oct 2024", link: "https://github.com/anishNagula/Leetcode-Backend" },
         { title: "Simple-User-and-Product-Management-System", description: "This is a basic C program that helps manage user and product information. The program uses hash tables for organizing products and binary trees to keep track of what user purchases. Every time a user purchases a product he will be automatically recommended related products using hashtables.", started: "Sep 2024", lastWorkedon: "Sep 2024", link: "https://github.com/anishNagula/Simple-User-and-Product-Management-System" },
-        { title: "Bash-PassMgr", description: "A minimal password manager that securely stores your credentials using AES-256 encryption with OpenSSL. No cloud storage, no third-party dependencies—just a lightweight, local password manager.", started: "Apr 20205", lastWorkedon: "Apr 2024", link: "https://github.com/anishNagula/Bash-PassMgr" },
         { title: "Amazon-Clone", description: "Built as a projects when learning basic front-end development. Used languages such as HTML/CSS/JavaScript", started: "Mar 2024", lastWorkedon: "Apr 2024", link: "https://github.com/anishNagula/Amazon-Clone" },
     ];
 
@@ -48,7 +49,7 @@ export default function Projects() {
             <Layout />
             <div className={styles.columns}>
                 <div className={styles.column}>
-                    <h2>Complete</h2>
+                    <h2>Completed</h2>
                     {completedProjects.map((project, index) => (
                         <ProjectCard key={index} {...project} />
                     ))}
