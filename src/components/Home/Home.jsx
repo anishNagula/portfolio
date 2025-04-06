@@ -62,22 +62,26 @@ export default function Home() {
             </div>
             <div className={styles.rightcontainer}>
               <h2>📌 Featured Projects</h2>
-              <ProjComp 
-                title="QuickBang" 
-                description="A simple and lightweight search tool with custom bang shortcuts (!bang)." 
-                tech="JavaScript" 
-              />
-              <ProjComp 
-                title="Custom OS Development" 
-                description="Building a minimal OS with a custom bootloader and kernel." 
-                tech="Rust, C, Assembly" 
-              />
-              <ProjComp 
-                title="Leetcode-Backend" 
-                description="Simple LeetCode backend emulator written in Go." 
-                tech="Go" 
-              />
+              <div className={styles.projectGrid}>
+                {[
+                  { title: "Bash-PassMgr", link: "https://github.com/anishNagula/Bash-PassMgr" },
+                  { title: "GhostDrop", link: "https://ghostdrop.anishnagula.me" },
+                  { title: "LeetCode-Backend", link: "https://github.com/anishNagula/Leetcode-Backend" },
+                  { title: "Simple-User-and-Product-Management-System", link: "https://github.com/anishNagula/Simple-User-and-Product-Management-System" }
+                ].map((proj, index) => (
+                  <a
+                    key={index}
+                    href={proj.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.projectLink}
+                  >
+                    {proj.title}
+                  </a>
+                ))}
+              </div>
             </div>
+
           </div>
           <div className={styles.bottomcontainer}>
             <h2>⚙️ Tech Stack</h2>

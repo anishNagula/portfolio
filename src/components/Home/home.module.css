@@ -28,12 +28,16 @@
 .leftcontainer {
     flex: 1;
     min-width: 300px;
+    max-width: 60%;
     padding: 20px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 h2 {
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 p {
@@ -48,7 +52,7 @@ ul {
 .rightcontainer {
     flex: 1;
     min-width: 280px;
-    max-width: 400px;
+    max-width: 40%;
 }
 
 .rightcontainer > h2 {
@@ -56,25 +60,34 @@ ul {
 }
 
 /* Project Cards */
-.projectCard {
-    background-color: #313131;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
-.projectCard h3 {
-    color: #00aaff;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.projectCard p {
-    font-size: 14px;
-    margin: 5px 0;
-}
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .projectLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    height: 10rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .projectLink:hover {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+  }
+  
 
 /* Bottom Container (Tech Stack) */
 .bottomcontainer {
