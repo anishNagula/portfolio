@@ -1,10 +1,13 @@
 import Layout from '../Layout/Layout'
+import styles from './blog.module.css';
 
 export default function Blog() {
     return (
-        <Layout>
-            <h1>Blog</h1>
-            <p>Writing about tech, programming, and projects.</p>
-        </Layout>
+        <div className={styles.main}>
+            <Layout />
+            <div className={styles.innermain}>
+                <h1>Coming Soon...</h1>
+            </div>
+        </div>
     );
 }
