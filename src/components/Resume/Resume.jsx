@@ -6,7 +6,7 @@ export default function Resume() {
         <div className={styles.main}>
             <Layout />
             <div className={styles.innermain}>
-                <iframe src="./Nagula_Anish_Resume.pdf" className={styles.pdfViewer} title="Resume" />
+                <iframe src="./Anish_Resume.pdf" className={styles.pdfViewer} title="Resume" />
             </div>
         </div>
     );
