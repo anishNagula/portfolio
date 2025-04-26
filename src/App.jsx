@@ -3,7 +3,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Resume from "./pages/resume/Resume"
 import Projects from "./pages/projects/Projects";
-import Blog from "./pages/blog/blog";
+import Blog from "./pages/blog/Blog";
 import './App.css'
 // import Resume from "./components/Resume/Resume";
 
