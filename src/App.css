@@ -141,36 +141,40 @@ footer a:hover {
   border: 1px solid #333;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  max-width: 700px;
   width: 100%;
   animation: fadeIn 0.5s ease-in-out;
 }
 
 .about-heading {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.75rem;
 }
 
 .about-subheading {
   font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
 .about-text {
   font-size: 1rem;
+  font-style: italic;
   line-height: 1.6;
-  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  padding-left: 9%;
+  margin: 0;
+  color: #afafaf;
 }
 
 .about-list {
   list-style: none;
-  padding-left: 0;
+  padding-left: 9%;
 }
 
 .about-list li {
   margin-bottom: 0.75rem;
+  font-style: italic;
   font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #afafaf;
 }
 
 @keyframes fadeIn {
