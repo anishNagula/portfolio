@@ -281,7 +281,7 @@ footer a:hover {
 
 .project-link {
   font-size: 0.9rem;
-  color: rgb(232, 201, 153);
+  color: #e8c999;
   text-decoration: none;
   font-weight: bold;
 }
@@ -325,7 +325,7 @@ footer a:hover {
 
 .blog-title {
   margin: 0 0 10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -340,7 +340,7 @@ footer a:hover {
 }
 
 .blog-content {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   color: #fff;
 }
