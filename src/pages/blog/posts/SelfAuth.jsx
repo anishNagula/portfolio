@@ -58,7 +58,7 @@ const SelfAuth = () => {
 
       <section>
         <h2 className={styles.heading2}>Extras</h2>
-        <p>If you're curious or want to collaborate, feel free to reach out. I’m always open to feedback, ideas, and building something better — together.</p>
+        <p>If you're curious or want to collaborate, feel free to reach out. I’m always open to feedback and ideas.</p>
 
         <footer>
           <p>--- Anish 🤧 ---</p>
