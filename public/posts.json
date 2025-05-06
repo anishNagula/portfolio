@@ -2,6 +2,6 @@
   {
     "title": "Self-Sovereign Authentication: Taking control of your <i>digital identity<i>",
     "date": "April 28, 2025",
-    "content": "<p>So, I’ve been diving into a thought I had recently, and I wanted to share it here. It’s called self-sovereign authentication, and the idea is pretty simple. <i style='color: #e8c999'><U>Instead of relying on Google, Facebook, or some other third-party to manage your online identity, you get to take control of it yourself.</U></i>, Sounds vague but hang on...</p><p>The concept is that you, the user, own your identity. You can generate a set of cryptographic keys namely one main key and two backup ones, that prove who you are. These keys rotate automatically to keep things secure, and there’s even a feature where users can vouch for each other to add trust in a decentralized way.</p><p>The whole point is to give people more privacy and security without needing to trust a middleman. Think of it like owning your ID and deciding who gets to see it. And you wanna know the cool part? You can integrate this system into any app or website super easily with a simple API.</p><p>This is still a work in progress (just a hobby project at this point honestly), but I think it could be a game changer for how we manage identities online. Pretty excited to see where it goes 🤧</p>"
+    "link": "/blog/selfauth"    
   }
 ]

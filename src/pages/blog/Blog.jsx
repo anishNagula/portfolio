@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-function BlogPost({ title, date, content }) {
+function BlogPost({ title, date, link }) {
     return (
-        <div className="blog-card">
-            <h2 
-                className="blog-title"
-                dangerouslySetInnerHTML={{ __html: title }}
-            ></h2>
-            <p className="blog-date">{date}</p>
-            <div
-                className="blog-content"
-                dangerouslySetInnerHTML={{ __html: content }} // This will render the HTML content
-            ></div>
-        </div>
+        <Link to={link}>
+            <div className="blog-card">
+                <h2 
+                    className="blog-title"
+                    dangerouslySetInnerHTML={{ __html: title }}
+                ></h2>
+                <p className="blog-date">{date}</p>
+            </div>
+        </Link>
     );
 }
 
