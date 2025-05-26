@@ -13,7 +13,7 @@ const links = [
 export default function Home() {
   return (
     <div className="container">
-      <h1 className="intro">hi, i'm an1.</h1>
+      <h1 className="intro">hi, i'm anish.</h1>
       <p className="subtitle">
         i build things no one asked for —<br />
         and somehow, they work (usually...🤞).
