@@ -32,14 +32,14 @@ export default function Projects() {
     ];
 
     const workingOnProjects = [
-        { title: "Smart Door Security System", description: "Uses sensors to detect intrusions", started: "Mar 2025", lastWorkedon: "Mar 2025", link: "" },
+        { title: "NekoOS", description: "A minimalist 32-bit x86 operating system built from scratch in C and Assembly. Features include a custom bootloader, protected mode transition, VGA text output, and direct keyboard input handling via scancodes. ", started: "May 2025", lastWorkedon: "Jun 2025", link: "https://github.com/anishNagula/NekoOS" },
         { title: "QuickBang", description: "A simple and lightweight search tool with custom bang shortcuts (!bang) for quick redirections to various search engines and websites. Supports dropdown suggestions, arrow key navigation, and auto-search on selection.", started: "Jan 2025", lastWorkedon: "Mar 2025", link: "https://quickbang.netlify.app" },
         { title: "Whisper", description: "A private, real-time chat app with disappearing messages and secure friend-to-friend conversations.", started: "Mar 2025", lastWorkedon: "Mar 2025", link: "https://anishnagula.me/projects" },
         { title: "DevLink", description: "A MERN stack application where developers can collaborate, share projects, and engage in discussions. Users can showcase their work, connect with others, and contribute to open-source initiatives.", started: "Nov 2024", lastWorkedon: "Mar 2025", link: "" },
+        { title: "Smart Door Security System", description: "Uses sensors to detect intrusions", started: "Mar 2025", lastWorkedon: "Mar 2025", link: "" },
     ];
 
     const futureProjects = [
-        { title: "Custom Linux Kernel", description: "A minimal OS running on QEMU", started: "yet", lastWorkedon: "to start", link: "" },
         { title: "FormulaOne", description: "An application that allows users to track races, drivers, and team standings in real time. Users can view race results, explore driver stats, and engage with the latest F1 updates.", started: "yet", lastWorkedon: "to start", link: "" },
         { title: "Tetris in Assembly", description: "A low-level implementation of the classic Tetris game using assembly language. It focuses on optimizing performance, managing graphics, and handling input at the hardware level.", started: "yet", lastWorkedon: "to start", link: "" },
     ];
