@@ -43,6 +43,18 @@ body {
   margin-bottom: 2rem;
 }
 
+.home-link {
+  font-size: 0.9rem;
+  color: #222;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.home-link:hover {
+  color: #aaa;
+}
+
 .link-list {
   display: flex;
   flex-direction: column;
@@ -343,4 +355,120 @@ footer a:hover {
   font-size: 0.9rem;
   line-height: 1.6;
   color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #000; /* overall dark background */
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.spot-item1, .spot-item2, .spot-item3, .spot-item4, .spot-item5 {
+  background-color: #0d0d0d; /* terminal background */
+  color: #ECF1F7; /* classic terminal green */
+  border: 1px solid #252E32;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  white-space: pre-wrap;
+}
+
+.spot-progressbar {
+  color: #30BD87;
+}
+
+.spot-name-two {
+  color: #8A8E9D;
+}
+
+.spot-name-three {
+  color: #57585D;
+}
+
+.spot-name-yellow {
+  color: #E2DC8B;
+}
+
+.spot-name-green {
+  color: #49A386;
+}
+
+.spot-name-purple {
+  color: #493775;
+}
+
+.spot-name-blue {
+  color: #3C7ACC;
+}
+
+
+.spot-checkbox {
+  color: #493775;
+  font-size: 1.2rem;
+}
+
+.spot-tick {
+  color: #49A386;
+  font-size: 1.2rem;
+}
+
+.spot-dot {
+  color: #3C7ACC;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.spot-item1 {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.spot-item2 {
+  grid-column: 4 / span 2;
+  grid-row: span 4;
+  background-image: url('./assets/wallpaper2.jpeg');
+  background-size: cover;
+}
+
+.spot-item3 {
+  grid-column: span 2;
+  grid-row: 4 / span 2;
+}
+
+.spot-item4 {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.spot-item5 {
+  grid-column: 3 / span 3;
+  grid-row: 5;
+}
+
+.terminal-pop {
+  opacity: 0;
+  transform: scale(0.98);
+  animation: popIn 0.005s forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

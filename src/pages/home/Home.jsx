@@ -18,6 +18,7 @@ export default function Home() {
         i build things no one asked for —<br />
         and somehow, they work (usually...🤞).
       </p>
+      <Link to="/spot"><p className="home-link">link to my secret home</p></Link>
       <div className="link-list">
         {links.map((link, idx) => (
           <Link to={link.url} className="card" key={idx}>
