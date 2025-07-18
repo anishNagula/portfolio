@@ -15,6 +15,12 @@ export default function About() {
                     I enjoy getting into low-level stuff and making software faster and better.
                 </p>
 
+                <h2 className="about-subheading">🧠 Skills</h2>
+                <ul className="about-list">
+                    <li><strong>Languages:</strong> Python, C, Go, JavaScript, Rust, SQL, Bash, Assembly (Beginner), Verilog (Beginner)</li>
+                    <li><strong>Tools:</strong> React, Node.js, MongoDB, Git, Linux, VS Code, Postman, Arduino IDE</li>
+                </ul>
+
                 <h2 className="about-subheading">🛠️ What I'm Working On</h2>
                 <ul className="about-list">
                     <li>
@@ -42,12 +48,6 @@ export default function About() {
                     <li><strong>Music and Random Stuff</strong><br />
                         Listening to music, reading about random topics.
                     </li>
-                </ul>
-
-                <h2 className="about-subheading">🧠 Skills</h2>
-                <ul className="about-list">
-                    <li><strong>Languages:</strong> Python, C, Go, JavaScript, Rust, SQL, Bash, Assembly (Beginner), Verilog (Beginner)</li>
-                    <li><strong>Tools:</strong> React, Node.js, MongoDB, Git, Linux, VS Code, Postman, Arduino IDE</li>
                 </ul>
             </div>
         </div>
