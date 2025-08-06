@@ -61,7 +61,7 @@ const SelfAuth = () => {
         <p>If you're curious or want to collaborate, feel free to reach out. I’m always open to feedback and ideas.</p>
 
         <footer>
-          <p>--- Anish 🤧 ---</p>
+          <p>--- thanks for reading ---</p>
         </footer>
       </section>
     </article>
