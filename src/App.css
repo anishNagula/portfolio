@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "JetBrains Mono", monospace;
-  background: #0f0f0f;
+  background: #000000;
   color: #eaeaea;
   display: flex;
   justify-content: center;
@@ -139,55 +139,172 @@ footer a:hover {
   }
 }
 
-
-.about-container {
+.about-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 50px 20px;
+  background-color: transparent; /* A light, modern background */
+  min-height: 100vh;
 }
 
-.about-card {
-  background: #1a1a1a;
-  padding: 1rem 1.5rem;
-  border: 1px solid #333;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 700px;
-  width: 100%;
-  animation: fadeIn 0.5s ease-in-out;
+.about-container {
+  width: 80vw;
 }
 
-.about-heading {
-  font-size: 1.75rem;
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.about-subheading {
+.about-intro {
   font-size: 1.5rem;
+  font-weight: bold;
+  color: #AAA;
+  margin: 0 auto;
 }
 
-.about-text {
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1.6;
-  font-family: 'Inter', sans-serif;
-  padding-left: 9%;
-  margin: 0;
-  color: #afafaf;
+/* Grid layout for the cards */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
 }
 
-.about-list {
+/* Base style for all cards */
+.about-card {
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s ease all;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Reusable section title style */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  color: #FFF;
+  margin-top: 0;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.section-title svg {
+  color: #FFD24E; /* Accent color */
+}
+
+/* Skills card specific styles */
+.skills-card .skills-category {
+  margin-bottom: 20px;
+}
+
+.skills-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  color: #AAA;
+  margin-bottom: 12px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: #1f1f1f;
+  color: #4a5568;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.skill-tag:hover {
+  background-color: #FFD24E;
+  color: #000;
+}
+
+/* "What I'm Building" list */
+.project-list {
   list-style: none;
-  padding-left: 9%;
+  padding-left: 0;
 }
 
-.about-list li {
-  margin-bottom: 0.75rem;
-  font-style: italic;
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  color: #afafaf;
+.project-list li {
+  padding-left: 20px;
+  border-left: 3px solid #4E7295;
+  margin-bottom: 20px;
 }
+
+.project-list li:last-child {
+  margin-bottom: 0;
+}
+
+.project-list strong {
+  font-size: 1.1rem;
+  color: #AAA;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.project-list p {
+  margin: 0;
+  color: #AAA;
+  line-height: 1.5;
+}
+
+/* "What I'm Into" list */
+.interest-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.interest-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.interest-icon {
+  font-size: 1rem;
+  color: #4E7295;
+  flex-shrink: 0;
+}
+
+.interest-list div {
+  display: flex;
+  flex-direction: column;
+}
+
+.interest-list strong {
+  font-size: 1.1rem;
+  color: #AAA;
+}
+
+.interest-list span {
+  color: #AAA;
+}
+
 
 @keyframes fadeIn {
   from {
