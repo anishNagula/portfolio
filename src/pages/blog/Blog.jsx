@@ -5,7 +5,7 @@ function BlogPost({ title, date, link }) {
     return (
         <Link to={link}>
             <div className="blog-card">
-                <h2 
+                <h2
                     className="blog-title"
                     dangerouslySetInnerHTML={{ __html: title }}
                 ></h2>
@@ -22,7 +22,7 @@ export default function Blog() {
         fetch("/posts.json")
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);  // Ensure the data looks correct
+                console.log(data); // Ensure the data looks correct
                 setPosts(data);
             })
             .catch((error) => console.error("Error fetching posts:", error));
@@ -32,13 +32,9 @@ export default function Blog() {
         <div className="blog-main">
             <h1 className="blog-heading">My Blog</h1>
             <div className="blog-posts">
-                {posts.length === 0 ? (
-                    <p className="blog-empty">Coming soon...</p>
-                ) : (
-                    posts.map((post, index) => (
-                        <BlogPost key={index} {...post} />
-                    ))
-                )}
+                {posts.map((post, index) => (
+                    <BlogPost key={index} {...post} />
+                ))}
             </div>
         </div>
     );
