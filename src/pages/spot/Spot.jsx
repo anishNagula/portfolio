@@ -72,7 +72,7 @@ export default function Spot() {
         )}
         {visibleTerminals >= 5 && (
           <div className="spot-item5 terminal-pop">
-            <div>neofetch-like ASCII art here 🚀</div>
+            <img className="github-graph" src="http://ghchart.rshah.org/anishnagula" alt="2016rshah's Github chart" />
           </div>
         )}
       </div>
