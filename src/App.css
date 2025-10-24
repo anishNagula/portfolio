@@ -31,12 +31,16 @@ body {
 }
 
 .intro {
-  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.intro-p {
+  font-size: 2rem;
 }
 
 .anish-image {
@@ -121,7 +125,12 @@ footer a:hover {
   }
 
   .intro {
-    font-size: 2rem;
+    justify-content: center;
+    gap: 1%;
+  }
+
+  .intro-p {
+    font-size: 1.7rem;
   }
 
   .subtitle {
