@@ -1,6 +1,7 @@
 // Home.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import anishImage from '../../assets/anish_name.png';
 
 const links = [
   { title: "about me 👤", description: "some stuff about me + random facts", url: "/about" },
@@ -13,7 +14,14 @@ const links = [
 export default function Home() {
   return (
     <div className="container">
-      <h1 className="intro">hi, i'm anish.</h1>
+      <h1 className="intro">
+        hi, i'm 
+        <img 
+          src={anishImage} 
+          alt="Anish" // Always include descriptive alt text for accessibility
+          className="anish-image" // Optional: Add a class for styling
+        />
+      </h1>
       <p className="subtitle">
         i build things no one asked for —<br />
         and somehow, they work (usually...🤞).

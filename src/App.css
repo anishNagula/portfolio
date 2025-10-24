@@ -35,6 +35,14 @@ body {
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.anish-image {
+  width: 200px;
+  height: auto;
+  margin-left: 7%;
 }
 
 .subtitle {
