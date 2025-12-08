@@ -43,6 +43,10 @@ body {
   font-size: 2.5rem;
 }
 
+.name_color {
+  color: #D1561C;
+}
+
 .anish-image {
   width: 200px;
   height: auto;

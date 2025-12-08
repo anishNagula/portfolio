@@ -15,18 +15,16 @@ export default function Home() {
   return (
     <div className="container">
       <h1 className="intro">
-        <p className="intro-p">hi, i'm </p>
-        <img 
+        <p className="intro-p">hi, i'm <span className="name_color">Anish</span></p>
+        {/* <img 
           src={anishImage} 
           alt="Anish" // Always include descriptive alt text for accessibility
           className="anish-image" // Optional: Add a class for styling
-        />
+        /> */}
       </h1>
       <p className="subtitle">
-        i build things no one asked for —<br />
-        and somehow, they work (usually...🤞).
+        just exploring & coding for fun ...
       </p>
-      <Link to="/spot"><p className="home-link">link to my secret home</p></Link>
       <div className="link-list">
         {links.map((link, idx) => (
           <Link to={link.url} className="card" key={idx}>

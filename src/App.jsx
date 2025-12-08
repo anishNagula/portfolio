@@ -6,7 +6,6 @@ import Projects from "./pages/projects/Projects";
 import Blog from "./pages/blog/Blog";
 import SelfAuth from "./pages/blog/posts/SelfAuth";
 import ArchOnMac from "./pages/blog/posts/ArchOnMac";
-import Spot from "./pages/spot/Spot";
 import './App.css'
 // import Resume from "./components/Resume/Resume";
 
@@ -20,7 +19,6 @@ export default function App() {
               <Route path="/resume" element={<Resume />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/spot" element={<Spot />} />
               <Route path="/blog/selfauth" element={<SelfAuth />} />
               <Route path="/blog/archonmac" element={<ArchOnMac />}></Route>
           </Routes>
