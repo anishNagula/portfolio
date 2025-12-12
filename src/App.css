@@ -43,6 +43,13 @@ body {
   font-size: 2.5rem;
 }
 
+.name_cursive {
+  font-family: Dynalight;
+  font-weight: bold;
+  font-size: 4.2rem;
+  color: #C6C6C6;
+}
+
 .name_color {
   color: #D1561C;
 }

@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="container">
       <h1 className="intro">
-        <p className="intro-p">hi, i'm <span className="name_color">Anish</span></p>
+        <p className="intro-p"><span className="name_cursive">hi, i'm </span><span className="name_color">Anish</span></p>
         {/* <img 
           src={anishImage} 
           alt="Anish" // Always include descriptive alt text for accessibility
