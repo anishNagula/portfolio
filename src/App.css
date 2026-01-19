@@ -33,7 +33,6 @@ body {
 .intro {
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,16 +40,12 @@ body {
 
 .intro-p {
   font-size: 2.5rem;
-}
-
-.name_cursive {
-  font-weight: bold;
-  font-size: 3.3rem;
-  color: #C6C6C6;
+  letter-spacing: -2px;
 }
 
 .name_color {
   color: #D1561C;
+  font-size: 2.5rem;
 }
 
 .anish-image {
@@ -86,7 +81,7 @@ body {
 .card {
   padding: 1rem 1.5rem;
   border: 1px solid #333;
-  background: #1a1a1a;
+  background: #000;
   text-decoration: none;
   color: inherit;
   transition: 0.2s ease all;

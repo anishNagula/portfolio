@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import anishImage from '../../assets/anish_name.png';
 
 const links = [
-  { title: "about me 👤", description: "some stuff about me + random facts", url: "/about" },
-  { title: "resume 🧾", description: "my pdf resume, updated(ish)", url: "/resume" },
-  { title: "projects ⚡", description: "stuff i built/building", url: "/projects" },
-  { title: "blog ✏️", description: "my thoughts on stuff", url: "/blog" },
+  { title: "about me", description: "some stuff about me + random facts", url: "/about" },
+  { title: "resume", description: "my pdf resume, updated(ish)", url: "/resume" },
+  { title: "projects", description: "stuff i built/building", url: "/projects" },
+  { title: "blog", description: "my thoughts on stuff", url: "/blog" },
 ];
 
 
