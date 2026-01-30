@@ -44,7 +44,7 @@ body {
 }
 
 .name_color {
-  color: #D1561C;
+  color: #FF9933;
   font-size: 2.5rem;
 }
 
@@ -88,8 +88,8 @@ body {
 }
 
 .card:hover {
-  border-color: #666;
-  background: #222;
+  border-color: #105A64;
+  background: #080808;
 }
 
 .card h2 {
