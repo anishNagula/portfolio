@@ -1,41 +1,53 @@
-import React, { useState, useEffect } from "react";
+// Blog.jsx
+import React from "react";
 import { Link } from "react-router-dom";
 
-function BlogPost({ title, date, link }) {
-    return (
-        <Link to={link}>
-            <div className="blog-card">
-                <h2
-                    className="blog-title"
-                    dangerouslySetInnerHTML={{ __html: title }}
-                ></h2>
-                <p className="blog-date">{date}</p>
-            </div>
-        </Link>
-    );
-}
-
 export default function Blog() {
-    const [posts, setPosts] = useState([]);
+  return (
+    <div className="container">
+      <Link to="/" className="home-link">
+        ← back
+      </Link>
 
-    useEffect(() => {
-        fetch("/posts.json")
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data); // Ensure the data looks correct
-                setPosts(data);
-            })
-            .catch((error) => console.error("Error fetching posts:", error));
-    }, []);
+      <h1 className="intro">
+        <p className="intro-p">
+          my <span className="name_color">blog</span>
+        </p>
+      </h1>
 
-    return (
-        <div className="blog-main">
-            <h1 className="blog-heading">My Blog</h1>
-            <div className="blog-posts">
-                {posts.map((post, index) => (
-                    <BlogPost key={index} {...post} />
-                ))}
-            </div>
-        </div>
-    );
+      <p className="subtitle">thoughts, notes & random stuff</p>
+
+      <div className="empty-state">
+        <span className="empty-404">404</span>
+        <p className="empty-message">nothing to see here yet</p>
+        <p className="empty-sub">check back soon — i'm working on it</p>
+      </div>
+
+      <footer>
+        <a
+          href="https://github.com/anishNagula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        •
+        <a
+          href="https://www.instagram.com/anishnagula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        •
+        <a
+          href="https://buymeacoffee.com/anishnagula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Buy Me a Coffee
+        </a>
+      </footer>
+    </div>
+  );
 }

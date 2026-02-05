@@ -1,106 +1,88 @@
+// About.jsx
 import React from "react";
-import { FaCode, FaPaintBrush, FaTools, FaBrain, FaRocket, FaMusic, FaLanguage, FaTerminal } from "react-icons/fa";
-import { GoGoal } from "react-icons/go";
-
-// You can create a small helper component for section titles to keep the main component clean
-const SectionTitle = ({ icon, title }) => (
-    <h2 className="section-title">
-        {icon}
-        <span>{title}</span>
-    </h2>
-);
+import { Link } from "react-router-dom";
 
 export default function About() {
-    return (
-        <section className="about-section">
-            <div className="about-container">
-                <div className="about-header">
-                    <p className="about-intro">
-                        A Computer Science student passionate about building and breaking things in tech. I enjoy diving into low-level systems to make software faster, more efficient, and secure.
-                    </p>
-                </div>
+  return (
+    <div className="container">
+      <Link to="/" className="home-link">
+        ← back
+      </Link>
 
-                <div className="about-grid">
-                    {/* Skills Section */}
-                    <div className="about-card skills-card">
-                        <SectionTitle icon={<FaBrain />} title="My Skillset" />
-                        <div className="skills-category">
-                            <h3><FaLanguage /> Languages</h3>
-                            <div className="skills-list">
-                                <span className="skill-tag">Python</span>
-                                <span className="skill-tag">C</span>
-                                <span className="skill-tag">Go</span>
-                                <span className="skill-tag">JavaScript</span>
-                                <span className="skill-tag">Rust</span>
-                                <span className="skill-tag">SQL</span>
-                                <span className="skill-tag">Bash</span>
-                                <span className="skill-tag">Assembly</span>
-                                <span className="skill-tag">Verilog</span>
-                            </div>
-                        </div>
-                        <div className="skills-category">
-                            <h3><FaTools /> Tools & Frameworks</h3>
-                            <div className="skills-list">
-                                <span className="skill-tag">React</span>
-                                <span className="skill-tag">Node.js</span>
-                                <span className="skill-tag">MongoDB</span>
-                                <span className="skill-tag">Git</span>
-                                <span className="skill-tag">Linux</span>
-                                <span className="skill-tag">VS Code</span>
-                                <span className="skill-tag">Postman</span>
-                                <span className="skill-tag">Arduino</span>
-                            </div>
-                        </div>
-                    </div>
+      <h1 className="intro">
+        <p className="intro-p">
+          about <span className="name_color">me</span>
+        </p>
+      </h1>
 
-                    {/* What I'm Working On Section */}
-                    <div className="about-card">
-                        <SectionTitle icon={<FaRocket />} title="What I'm Building" />
-                        <ul className="project-list">
-                            <li>
-                                <strong>Secure Communication Systems</strong>
-                                <p>Designing encrypted communication protocols and tools focused on privacy and resilience.</p>
-                            </li>
-                            <li>
-                                <strong>Self-Sovereign Identity Solutions</strong>
-                                <p>Building decentralized identity systems where users own and control their credentials.</p>
-                            </li>
-                            <li>
-                                <strong>Applied AI for Real-World Problems</strong>
-                                <p>Developing AI-powered tools that automate tasks and optimize complex workflows.</p>
-                            </li>
-                        </ul>
-                    </div>
+      <p className="subtitle">
+        cs student. building & breaking things in tech.
+      </p>
 
-                    {/* What I'm Into Section */}
-                    <div className="about-card">
-                        <SectionTitle icon={<GoGoal />} title="What I'm Into" />
-                        <ul className="interest-list">
-                            <li>
-                                <FaTerminal className="interest-icon" />
-                                <div>
-                                    <strong>Systems & AI</strong>
-                                    <span>Exploring how computers and AI work at a fundamental level.</span>
-                                </div>
-                            </li>
-                            <li>
-                                <FaCode className="interest-icon" />
-                                <div>
-                                    <strong>Rust & C Programming</strong>
-                                    <span>Writing low-level code that interfaces directly with hardware.</span>
-                                </div>
-                            </li>
-                            <li>
-                                <FaMusic className="interest-icon" />
-                                <div>
-                                    <strong>Music & Deep Dives</strong>
-                                    <span>Listening to music and getting lost in random technical topics.</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+      <div className="about-content">
+        <div className="about-card-minimal">
+          <h2>languages</h2>
+          <p>Python, C, Go, JavaScript, Rust, SQL, Bash, Assembly, Verilog</p>
+        </div>
+
+        <div className="about-card-minimal">
+          <h2>tools</h2>
+          <p>React, Node.js, MongoDB, Git, Linux, Arduino</p>
+        </div>
+
+        <div className="about-card-minimal">
+          <h2>currently building</h2>
+          <ul>
+            <li>
+              <strong>secure communication systems</strong> — encrypted
+              protocols focused on privacy
+            </li>
+            <li>
+              <strong>self-sovereign identity</strong> — decentralized systems
+              where users own their data
+            </li>
+            <li>
+              <strong>applied ai tools</strong> — automating tasks & optimizing
+              workflows
+            </li>
+          </ul>
+        </div>
+
+        <div className="about-card-minimal">
+          <h2>interests</h2>
+          <ul>
+            <li>systems programming & ai internals</li>
+            <li>low-level rust & c</li>
+            <li>music & random technical rabbit holes</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer>
+        <a
+          href="https://github.com/anishNagula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        •
+        <a
+          href="https://www.instagram.com/anishnagula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        •
+        <a
+          href="https://buymeacoffee.com/anishnagula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Buy Me a Coffee
+        </a>
+      </footer>
+    </div>
+  );
 }
