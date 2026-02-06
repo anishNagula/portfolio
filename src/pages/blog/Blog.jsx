@@ -17,10 +17,26 @@ export default function Blog() {
 
       <p className="subtitle">thoughts, notes & random stuff</p>
 
-      <div className="empty-state">
-        <span className="empty-404">404</span>
-        <p className="empty-message">nothing to see here yet</p>
-        <p className="empty-sub">check back soon — i'm working on it</p>
+      <div className="link-list">
+      <Link to="/blog/why-os-is-not-a-process" className="card">
+        <h2>why the os isn’t just a process</h2>
+        <p>a systems thought about schedulers and kernels</p>
+      </Link>
+
+      <Link to="/blog/kernel-mode-is-just-a-bit" className="card">
+        <h2>kernel mode is just a bit</h2>
+        <p>why user programs can’t flip it</p>
+      </Link>
+
+      <Link to="/blog/open-source-and-incentives" className="card">
+        <h2>open source and incentives</h2>
+        <p>why critical software quietly breaks</p>
+      </Link>
+
+      <Link to="/blog/do-more-cores-mean-more-registers" className="card">
+        <h2>do more cpu cores mean more registers?</h2>
+        <p>thinking about hardware abstractions</p>
+      </Link>
       </div>
 
       <footer>
